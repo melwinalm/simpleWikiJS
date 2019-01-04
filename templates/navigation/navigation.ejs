@@ -1,0 +1,10 @@
+<nav class="UnderlineNav UnderlineNav--right" aria-label="Foo bar">
+    <div class="UnderlineNav-actions">
+        <p class="alt-h3"><%= navigation.title %></p>
+    </div>
+    <div class="UnderlineNav-body">
+        <% navigation.items.forEach(function(item){ %>
+            <a href="<%= item.url %>" class="UnderlineNav-item"><%= item.title %></a>
+        <% }); %>
+    </div>
+</nav>
