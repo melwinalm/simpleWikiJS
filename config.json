@@ -1,6 +1,10 @@
 {
     "main": {
-        "title": "Simple Wiki JS Documentation"
+        "title": "Simple Wiki JS Documentation",
+        "subtitle": "",
+        "description": "For seo purpose",
+        "font": "",
+        "defaultLanguage": "en"
     },
 
     "siteTitle": "Simple Wiki JS",
@@ -25,10 +29,16 @@
     },
 
     "wiki": {
-        "template": "wiki/wiki.ejs"
+        "template": "wiki/wiki.ejs",
+        "defaultfolder": "pages"
     },
 
+    "content": {
+        "template": "content/content.ejs"
+    },
+
+    "footer":{
+        "template": "footer/footer.ejs"
+    }
     
-    "footerLoc": "footer/footer.ejs",
-    "defaultLanguage": "en"
 }

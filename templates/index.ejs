@@ -12,8 +12,10 @@
 <body>
     <%- include(navigation.template, {navigation}) -%>
 
-    <%- include(wiki.template, {wikiContents}) -%>
+    <%- include(wiki.template, {wiki, wikiContents}) -%>
 
-    <%- include('footer/footer'); -%>
+    <%- include(content.template, {pageContent}); -%>
+
+    <%- include(footer.template); -%>
 </body>
 </html>

@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "showdown": "^1.9.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
