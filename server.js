@@ -15,9 +15,15 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 var configBuffer = fs.readFileSync(path.join(__dirname , 'config.json'));
 var CONFIG = JSON.parse(configBuffer);
 
+// Loading the wiki.json file
+var wikiBuffer = fs.readFileSync(path.join(__dirname, 'wiki.json'));
+var WIKI = JSON.parse(wikiBuffer);
+
 app.get('/', function(req, res){ 
     res.render('index', {
-        siteTitle: 'Simple Wiki JS Documentation',
-        navigation: CONFIG.navigation
+        main: CONFIG.main,
+        navigation: CONFIG.navigation,
+        wiki: CONFIG.wiki,
+        wikiContents: WIKI
     });
 });

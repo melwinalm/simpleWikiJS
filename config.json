@@ -1,6 +1,9 @@
 {
+    "main": {
+        "title": "Simple Wiki JS Documentation"
+    },
+
     "siteTitle": "Simple Wiki JS",
-    "stickyHeader":  false,
     "theme": "themes/default.theme",
     "forkMeOnGithubLabel": false,
     "forkMeLink": "https://github.com/melwinalm/simplewikijs",
@@ -17,10 +20,15 @@
         ],
 
         "icon": "yet to be done",
-        "template": "navigation/navigation.ejs"
+        "template": "navigation/navigation.ejs",
+        "sticky": false
+    },
+
+    "wiki": {
+        "template": "wiki/wiki.ejs"
     },
 
     
-    "footerLoc": "footer/footer.ejs"
-
+    "footerLoc": "footer/footer.ejs",
+    "defaultLanguage": "en"
 }

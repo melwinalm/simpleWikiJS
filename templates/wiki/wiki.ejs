@@ -1,0 +1,12 @@
+<nav class="menu" style="width: 200px;">
+
+    <% wikiContents.items.forEach(function(item){ %>
+        <a href="<%= item.url %>" class="menu-heading"><%= item.title %></a>
+        <% if (item.subitems) { %>
+            <% item.subitems.forEach(function(subitem){ %>
+                <a href="<%= subitem.url %>" class="menu-item"><%= subitem.title %></a>
+            <% }); %>
+        <% } %>
+    <% }); %>
+
+</nav>
