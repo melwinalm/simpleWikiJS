@@ -12,7 +12,7 @@
 
     <%- include(wiki.template, {wiki, wikiContents}) -%>
 
-    <%- include(content.template, {pageContent}); -%>
+    <%- include(content.template, {pageTitle, pageContent}); -%>
 
     <%- include(footer.template); -%>
 </body>
