@@ -34,17 +34,11 @@ const HOME_PAGE_LOCATION = '/' + DEFAULT_FOLDER_LOCATION + '/' + WIKI.homepageur
 var WikiFileToLocationRef = {};
 
 WIKI.items.forEach(item => {
-    WikiFileToLocationRef[item.url] = {
-        "filelocation": item.filelocation,
-        "title": item.title
-    }
+    WikiFileToLocationRef[item.url] = item;
 
     if (item.subitems != undefined) {
         item.subitems.forEach(subitem => {
-            WikiFileToLocationRef[subitem.url] = {
-                "filelocation": item.filelocation,
-                "title": item.title
-            }
+            WikiFileToLocationRef[subitem.url] = subitem
         });
     }
 });
@@ -57,29 +51,29 @@ app.get('/' + DEFAULT_FOLDER_LOCATION + '/:url', function (req, res) {
 
     if (WikiFileToLocationRef[req.params.url] != undefined) {
 
-        let fileLocation = path.join(__dirname, DEFAULT_FOLDER_LOCATION, WikiFileToLocationRef[req.params.url].filelocation);
+            let fileLocation = path.join(__dirname, DEFAULT_FOLDER_LOCATION, WikiFileToLocationRef[req.params.url].filelocation);
 
-        fs.readFile(fileLocation, 'utf8', function (err, content) {
-            if (err) {
-                console.log("File not found: " + fileLocation);
-                res.sendStatus(404);
-            }
-            else {
-                let htmlContent = mdConverter.makeHtml(content);
+            fs.readFile(fileLocation, 'utf8', function (err, content) {
+                if (err) {
+                    console.log("File not found: " + fileLocation);
+                    res.sendStatus(404);
+                }
+                else {
+                    let htmlContent = mdConverter.makeHtml(content);
 
-                res.render('index', {
-                    main: CONFIG.main,
-                    navigation: CONFIG.navigation,
-                    wiki: CONFIG.wiki,
-                    wikiContents: WIKI,
-                    content: CONFIG.content,
-                    footer: CONFIG.footer,
-                    pageTitle: WikiFileToLocationRef[req.params.url].title,
-                    pageContent: htmlContent
-                });
-            }
-        });
-    }
+                    res.render('index', {
+                        main: CONFIG.main,
+                        navigation: CONFIG.navigation,
+                        wiki: CONFIG.wiki,
+                        wikiContents: WIKI,
+                        content: CONFIG.content,
+                        footer: CONFIG.footer,
+                        pageTitle: WikiFileToLocationRef[req.params.url].title,
+                        pageContent: htmlContent
+                    });
+                }
+            });
+        }
     else {
         console.log("Page not found: " + req.params.url);
         res.sendStatus(404);
