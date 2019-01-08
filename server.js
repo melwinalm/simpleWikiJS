@@ -6,6 +6,9 @@ var ejs = require('ejs');
 var showdown  = require('showdown');
 var mdConverter = new showdown.Converter();
 
+// app.use('/', express.static(__dirname + '/public'));
+app.use('/', express.static(__dirname + '/public'));
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'templates'))
 
