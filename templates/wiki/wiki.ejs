@@ -1,10 +1,10 @@
 <nav class="menu">
 
     <% wikiContents.items.forEach(function(item){ %>
-        <a href="<%= wiki.defaultfolder %>/<%= item.url %>" class="menu-heading"><%= item.title %></a>
+        <a href="../<%= wiki.defaultfolder %>/<%= item.url %>" class="menu-heading"><%= item.title %></a>
         <% if (item.subitems) { %>
             <% item.subitems.forEach(function(subitem){ %>
-                <a href="<%= wiki.defaultfolder %>/<%= subitem.url %>" class="menu-item"><%= subitem.title %></a>
+                <a href="../<%= wiki.defaultfolder %>/<%= subitem.url %>" class="menu-item"><%= subitem.title %></a>
             <% }); %>
         <% } %>
     <% }); %>
