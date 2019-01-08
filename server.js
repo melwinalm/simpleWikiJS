@@ -27,6 +27,7 @@ var WIKI = JSON.parse(wikiBuffer);
 /* CONSTANTS */
 
 const DEFAULT_FOLDER_LOCATION = CONFIG.wiki.defaultfolder;
+const HOME_PAGE_LOCATION = '/' + DEFAULT_FOLDER_LOCATION + '/' + WIKI.homepageurl;
 
 /* END OF CONSTANTS */
 
@@ -43,15 +44,7 @@ WIKI.items.forEach(item => {
 });
 
 app.get('/', function(req, res){ 
-    res.render('index', {
-        main: CONFIG.main,
-        navigation: CONFIG.navigation,
-        wiki: CONFIG.wiki,
-        wikiContents: WIKI,
-        content: CONFIG.content,
-        footer: CONFIG.footer,
-        pageContent: "Click on any of the links"
-    });
+    res.redirect(HOME_PAGE_LOCATION);
 });
 
 app.get('/' + DEFAULT_FOLDER_LOCATION + '/:url', function(req, res){
