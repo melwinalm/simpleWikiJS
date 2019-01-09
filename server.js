@@ -2,7 +2,6 @@ var fs = require('fs');
 var express = require('express');
 var app = express();
 var path = require('path');
-var ejs = require('ejs');
 var showdown = require('showdown');
 var mdConverter = new showdown.Converter();
 
@@ -87,5 +86,5 @@ app.all('/*', function(req, res){
         defaultfolder: CONFIG.wiki.defaultfolder,
         homepageurl: WIKI.homepageurl,
     })
-    console.log("Route not found: " + req);
+    console.log("Route not found: " + JSON.stringify(req));
 })
