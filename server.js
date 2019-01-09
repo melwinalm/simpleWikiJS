@@ -75,8 +75,19 @@ app.get('/' + DEFAULT_FOLDER_LOCATION + '/:url', function (req, res) {
             });
         }
     else {
+        res.render('404', {
+            defaultfolder: CONFIG.wiki.defaultfolder,
+            homepageurl: WIKI.homepageurl,
+        })
         console.log("Page not found: " + req.params.url);
-        res.sendStatus(404);
     }
 
+})
+
+app.all('/*', function(req, res){
+    res.render('404', {
+        defaultfolder: CONFIG.wiki.defaultfolder,
+        homepageurl: WIKI.homepageurl,
+    })
+    console.log("Page not found: " + req.params.url);
 })
