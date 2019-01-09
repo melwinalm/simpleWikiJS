@@ -48,7 +48,6 @@ app.get('/', function (req, res) {
 });
 
 app.get('/' + DEFAULT_FOLDER_LOCATION + '/:url', function (req, res) {
-
     if (WikiFileToLocationRef[req.params.url] != undefined) {
 
             let fileLocation = path.join(__dirname, DEFAULT_FOLDER_LOCATION, WikiFileToLocationRef[req.params.url].filelocation);
@@ -81,7 +80,6 @@ app.get('/' + DEFAULT_FOLDER_LOCATION + '/:url', function (req, res) {
         })
         console.log("Page not found: " + req.params.url);
     }
-
 })
 
 app.all('/*', function(req, res){
@@ -89,5 +87,5 @@ app.all('/*', function(req, res){
         defaultfolder: CONFIG.wiki.defaultfolder,
         homepageurl: WIKI.homepageurl,
     })
-    console.log("Page not found: " + req.params.url);
+    console.log("Route not found: " + req);
 })
