@@ -1,3 +1,24 @@
-<h2>PAGE NOT FOUND</h2>
+<!DOCTYPE html>
+<html>
+<head>
 
-<span>Click <a href="../<%= defaultfolder %>/<%= homepageurl %>">here</a> to go to gome page</span>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        404 - Page Not Found
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/10.10.2/build.css" />
+
+</head>
+<body>
+    <%- include(navigation.template, {navigation}) -%>
+
+    <div class="container-lg clearfix">
+        <h2>Click <a href="../<%= defaultfolder %>/<%= homepageurl %>">here</a> to go to gome page</h2>
+    </div>
+
+    <%- include(footer.template); -%>
+</body>
+</html>

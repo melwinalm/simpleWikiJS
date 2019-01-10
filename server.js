@@ -76,6 +76,8 @@ app.get('/' + DEFAULT_FOLDER_LOCATION + '/:url', function (req, res) {
         res.render('404', {
             defaultfolder: CONFIG.wiki.defaultfolder,
             homepageurl: WIKI.homepageurl,
+            navigation: CONFIG.navigation,
+            footer: CONFIG.footer
         })
         console.log("Page not found: " + req.params.url);
     }
@@ -85,6 +87,8 @@ app.all('/*', function(req, res){
     res.render('404', {
         defaultfolder: CONFIG.wiki.defaultfolder,
         homepageurl: WIKI.homepageurl,
+        navigation: CONFIG.navigation,
+        footer: CONFIG.footer
     })
     console.log("Route not found: " + JSON.stringify(req));
 })
