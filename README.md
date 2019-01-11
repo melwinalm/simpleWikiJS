@@ -82,3 +82,40 @@ Following json files are used to customize the data displayed in the page -
 `template` - Specifies the design template for navigation bar. Customize existing ones or create new ones in this folder  - `\templates\navigation\`.
 
 `sticky` - Set it to `true`, if you want the navigation bar to be fixed on the top of page, even when the page is scrolled. Yet to implemented.
+
+- Wiki Settings
+
+'''
+"wiki": {
+        "template": "wiki/wiki.ejs",
+        "defaultfolder": "pages"
+    },
+'''
+
+`template`- Specifies the design template for wiki navigation. Customize existing ones or create new ones in this folder  - `\templates\wiki\`.
+
+`defaultfolder` - Specifies the folder location where the content(MD and HTML) files are available.
+
+- Content Settings
+
+'''
+"content": {
+        "template": "content/content.ejs"
+    },
+'''
+
+`template` - Specifies the design template for content part. Customize existing ones or create new ones in this folder  - `\templates\content\`.
+
+- Footer Settings
+
+'''
+"footer":{
+        "template": "footer/footer.ejs"
+    }
+'''
+
+`template` - Specifies the design template for footer navigation. Customize existing ones or create new ones in this folder  - `\templates\footer\`.
+
+#### `wiki.json`
+
+#### Customizing 404 page
