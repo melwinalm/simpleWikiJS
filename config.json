@@ -4,7 +4,8 @@
         "subtitle": "",
         "description": "For seo purpose",
         "font": "",
-        "defaultLanguage": "en"
+        "defaultLanguage": "en",
+        "themecolor": "#ff6600"
     },
 
     "siteTitle": "Simple Wiki JS",
