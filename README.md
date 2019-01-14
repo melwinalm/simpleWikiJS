@@ -119,3 +119,5 @@ Following json files are used to customize the data displayed in the page -
 #### `wiki.json`
 
 #### Customizing 404 page
+
+- Navigate to `templates` folder location and modify the 404.ejs file to customize the 404 page.
