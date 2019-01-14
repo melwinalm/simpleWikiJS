@@ -1,7 +1,12 @@
 {
-    "homepageurl": "getting-started",
+    "homepageurl": "readme",
 
     "items": [
+        {
+            "title": "README",
+            "url": "readme",
+            "filelocation": "README.md"
+        },
         {
             "title": "Getting Started",
             "url": "getting-started",
