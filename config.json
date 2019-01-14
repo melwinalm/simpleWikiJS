@@ -40,6 +40,12 @@
 
     "footer":{
         "template": "footer/footer.ejs"
+    },
+
+    "alert": {
+        "isshown": true,
+        "alerttype": "info",
+        "message": "A new version of simpleWikiJS will be releasing in the upcoming months"
     }
     
 }

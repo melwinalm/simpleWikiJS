@@ -22,7 +22,7 @@ This is currently not released as a npm package
 
 Following json files are used to customize the data displayed in the page -
 
-#### `config.json`
+#### config.json
 
 - Main Settings
 
@@ -116,7 +116,23 @@ Following json files are used to customize the data displayed in the page -
 
 `template` - Specifies the design template for footer navigation. Customize existing ones or create new ones in this folder  - `\templates\footer\`.
 
-#### `wiki.json`
+- Alert Settings
+
+```json
+"alert": {
+        "isshown": true,
+        "type": "info",
+        "message": "A new version of simpleWikiJS will be releasing in the upcoming months"
+    }
+```
+
+`isshown` - Alert will be displayed in the page if this value is set to true
+
+`type` - This defines the theme of the alert. Values like - info, important, warning can be used
+
+`message` - The message to be shown in the page
+
+#### wiki.json
 
 ```json
     "homepageurl": "getting-started"
