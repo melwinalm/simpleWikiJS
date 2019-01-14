@@ -26,7 +26,7 @@ Following json files are used to customize the data displayed in the page -
 
 - Main Settings
 
-'''
+```json
 "main": {
         "title": "Simple Wiki JS Documentation",
         "subtitle": "",
@@ -35,7 +35,7 @@ Following json files are used to customize the data displayed in the page -
         "defaultLanguage": "en",
         "themecolor": "#ff6600"
     },
-'''
+```
 
 `title` - Title of the page. This will remain same in every page, even when you navigate to other pages.
 
@@ -51,7 +51,7 @@ Following json files are used to customize the data displayed in the page -
 
 - Navigation Settings
 
-'''
+```json
 "navigation": {
         "title": "Simple Wiki JS",
         "items": [
@@ -67,7 +67,7 @@ Following json files are used to customize the data displayed in the page -
         "template": "navigation/navigation.ejs",
         "sticky": false
     },
-'''
+```
 
 `title` - Text to be displayed in the navigation bar
 
@@ -85,12 +85,12 @@ Following json files are used to customize the data displayed in the page -
 
 - Wiki Settings
 
-'''
+```json
 "wiki": {
         "template": "wiki/wiki.ejs",
         "defaultfolder": "pages"
     },
-'''
+```
 
 `template`- Specifies the design template for wiki navigation. Customize existing ones or create new ones in this folder  - `\templates\wiki\`.
 
@@ -98,21 +98,21 @@ Following json files are used to customize the data displayed in the page -
 
 - Content Settings
 
-'''
+```json
 "content": {
         "template": "content/content.ejs"
     },
-'''
+```
 
 `template` - Specifies the design template for content part. Customize existing ones or create new ones in this folder  - `\templates\content\`.
 
 - Footer Settings
 
-'''
+```json
 "footer":{
         "template": "footer/footer.ejs"
     }
-'''
+```
 
 `template` - Specifies the design template for footer navigation. Customize existing ones or create new ones in this folder  - `\templates\footer\`.
 
