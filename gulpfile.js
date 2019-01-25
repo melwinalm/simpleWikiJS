@@ -16,3 +16,10 @@ task('server', function (done) {
     })
 })
 
+task('validate', function(done){
+    nodemon({
+        script: 'validate.js',
+        ext: 'json',
+        done: done
+    })
+})
