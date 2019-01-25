@@ -9,6 +9,7 @@
   "author": "melwinalm",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^2.4.2",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "showdown": "^1.9.0"
