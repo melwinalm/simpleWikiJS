@@ -13,7 +13,7 @@ app.set('views', path.join(__dirname, 'templates'))
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`App listening on port ${port}!`))
 
 // Loading the config.js file
 var configBuffer = fs.readFileSync(path.join(__dirname, 'config.json'));
