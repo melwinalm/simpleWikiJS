@@ -1,7 +1,7 @@
 var Ajv = require('ajv');
 var ajv = new Ajv();
 
-var schema = {
+var schemaWiki = {
     type: "object",
     properties: {
         "homepageurl": {
@@ -61,7 +61,17 @@ var schema = {
     required: ["homepageurl", "items"]
 };
 
-var data = require('./wiki.json');
+var dataWiki = require('./wiki.json');
 
-var validateWiki = ajv.validate(schema, data);
-if (!validateWiki) console.log(ajv.errors);
+var validateWiki = ajv.validate(schemaWiki, dataWiki);
+if (!validateWiki) {
+    console.log("wiki.json: Following errors were found during JSON Schema validation");
+    ajv.errors.forEach(function (value) {
+        console.log(`- Data Path: ${value.dataPath} Message: ${value.message}`);
+    })
+}
+else{
+    console.log("wiki.json: No errors were found in the schema");
+}
+
+
