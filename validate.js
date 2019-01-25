@@ -1,5 +1,6 @@
 var Ajv = require('ajv');
 var ajv = new Ajv();
+var chalk = require('chalk');
 
 var schemaWiki = {
     type: "object",
@@ -65,13 +66,11 @@ var dataWiki = require('./wiki.json');
 
 var validateWiki = ajv.validate(schemaWiki, dataWiki);
 if (!validateWiki) {
-    console.log("wiki.json: Following errors were found during JSON Schema validation");
+    console.log(chalk.red("wiki.json: Following errors were found during JSON Schema validation"));
     ajv.errors.forEach(function (value) {
-        console.log(`- Data Path: ${value.dataPath} Message: ${value.message}`);
+        console.log(chalk.red(`- Data Path: ${value.dataPath} Message: ${value.message}`));
     })
 }
 else{
-    console.log("wiki.json: No errors were found in the schema");
+    console.log(chalk.green("wiki.json: No errors were found in the schema"));
 }
-
-
