@@ -29,25 +29,10 @@ Following json files are used to customize the data displayed in the page -
 ```json
 "main": {
         "title": "Simple Wiki JS Documentation",
-        "subtitle": "",
-        "description": "For seo purpose",
-        "font": "",
-        "defaultLanguage": "en",
-        "themecolor": "#ff6600"
     },
 ```
 
 `title` - Title of the page. This will remain same in every page, even when you navigate to other pages.
-
-`subtitle` - This will used for SEO optimization purpose. Yet to be implemented.
-
-`description` - Yet to be implemented.
-
-`font` - Allows you to customize the page with different fonts. Yet to be implemented.
-
-`defaultlanguage` - Metadata purpose. This is used so that the browser can understand which is the language used in the page, so that it can offer google translations to the user. Yet to be implemented.
-
-`themecolor` - This color defines the theme of the page, also it is used to set the tab color (Only in Chrome for Android).
 
 - Navigation Settings
 
@@ -62,10 +47,7 @@ Following json files are used to customize the data displayed in the page -
             {"title": "INSTALL", "url": "/install"},
             {"title": "GITHUB", "url": "https://github.com/melwinalm/simplewikijs"}
         ],
-
-        "icon": "yet to be done",
         "template": "navigation/navigation.ejs",
-        "sticky": false
     },
 ```
 
@@ -73,15 +55,7 @@ Following json files are used to customize the data displayed in the page -
 
 `items` - This is an array of objects, each object containing information about navigation item.
 
-`title` - Text to be displayed for the navigation item.
-
-`url` - Navigation link when the navigation item is clicked.
-
-`icon` - Icon for the navigation item. Yet to be implemented.
-
 `template` - Specifies the design template for navigation bar. Customize existing ones or create new ones in this folder  - `\templates\navigation\`.
-
-`sticky` - Set it to `true`, if you want the navigation bar to be fixed on the top of page, even when the page is scrolled. Yet to implemented.
 
 - Wiki Settings
 
@@ -105,32 +79,6 @@ Following json files are used to customize the data displayed in the page -
 ```
 
 `template` - Specifies the design template for content part. Customize existing ones or create new ones in this folder  - `\templates\content\`.
-
-- Footer Settings
-
-```json
-"footer":{
-        "template": "footer/footer.ejs"
-    }
-```
-
-`template` - Specifies the design template for footer navigation. Customize existing ones or create new ones in this folder  - `\templates\footer\`.
-
-- Alert Settings
-
-```json
-"alert": {
-        "isshown": true,
-        "type": "info",
-        "message": "A new version of simpleWikiJS will be releasing in the upcoming months"
-    }
-```
-
-`isshown` - Alert will be displayed in the page if this value is set to true
-
-`type` - This defines the theme of the alert. Values like - info, important, warning can be used
-
-`message` - The message to be shown in the page
 
 #### wiki.json
 
