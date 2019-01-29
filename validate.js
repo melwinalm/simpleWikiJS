@@ -1,6 +1,8 @@
 var Ajv = require('ajv');
 var ajv = new Ajv();
 var chalk = require('chalk');
+var fs = require('fs');
+var path = require('path');
 
 // Validating wiki.json file
 var schemaWiki = {
@@ -164,3 +166,23 @@ if (!validateConfig) {
 else {
     console.log(chalk.green("config.json: No errors were found in the schema"));
 }
+
+// Loading the config.js file
+var configBuffer = fs.readFileSync(path.join(__dirname, 'config.json'));
+var CONFIG = JSON.parse(configBuffer);
+
+// Loading the wiki.json file
+var wikiBuffer = fs.readFileSync(path.join(__dirname, 'wiki.json'));
+var WIKI = JSON.parse(wikiBuffer);
+
+// Validate if default folder exists
+var defaultFolder = CONFIG.wiki.defaultfolder;
+
+if (fs.existsSync(path.join(__dirname, defaultFolder))){
+    console.log(chalk.green("Default folder exists"));
+}
+else{
+    console.log(chalk.red(`Default folder doesn't exist. Create a folder named ${defaultFolder} in the root directory`));
+}
+
+console.log(defaultFolder);
