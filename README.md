@@ -162,6 +162,14 @@ Following json files are used to customize the data displayed in the page -
 
 `filelocation` - name of the markdown file, to be rendered on the page.
 
+## Validating config.json and wiki.json
+
+Make changes to config.json and wiki.json files to match your requirement and save them. Then run the following command to verify the files.
+
+```
+    npm test
+```
+
 #### Customizing 404 page
 
 - Navigate to `templates` folder location and modify the 404.ejs file to customize the 404 page.
