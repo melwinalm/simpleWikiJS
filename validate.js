@@ -175,14 +175,37 @@ var CONFIG = JSON.parse(configBuffer);
 var wikiBuffer = fs.readFileSync(path.join(__dirname, 'wiki.json'));
 var WIKI = JSON.parse(wikiBuffer);
 
+var wikiURLs = [];
+var wikiFiles = [];
+
+WIKI.items.forEach(item => {
+    wikiURLs.push(item.url);
+    wikiFiles.push(item.filelocation);
+
+    if (item.subitems != undefined) {
+        item.subitems.forEach(subitem => {
+            wikiURLs.push(subitem.url);
+            wikiFiles.push(subitem.filelocation);
+        });
+    }
+});
+
 // Validate if default folder exists
 var defaultFolder = CONFIG.wiki.defaultfolder;
 
-if (fs.existsSync(path.join(__dirname, defaultFolder))){
+if (fs.existsSync(path.join(__dirname, defaultFolder))) {
     console.log(chalk.green("Default folder exists"));
 }
-else{
+else {
     console.log(chalk.red(`Default folder doesn't exist. Create a folder named ${defaultFolder} in the root directory`));
 }
 
-console.log(defaultFolder);
+// Validate if all files exists in the default folder
+wikiFiles.forEach(element => {
+    if (fs.existsSync(path.join(__dirname, element))) {
+        console.log(chalk.green(`File - ${element} exists`));
+    }
+    else {
+        console.log(chalk.red(`File - ${element} doesn't exist in the ${defaultFolder} folder`));
+    }
+});
