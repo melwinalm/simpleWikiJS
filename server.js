@@ -91,5 +91,5 @@ app.all('/*', function(req, res){
         navigation: CONFIG.navigation,
         footer: CONFIG.footer
     })
-    console.log(chalk.red("Route not found: " + JSON.stringify(req)));
+    console.log(chalk.red("Route not found: " + req.url));
 })
