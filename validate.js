@@ -209,3 +209,11 @@ wikiFiles.forEach(element => {
         console.log(chalk.red(`File - ${element} doesn't exist in the ${defaultFolder} folder`));
     }
 });
+
+// Validate if the homepageurl provided in wiki.json is valid
+if (wikiURLs.indexOf(WIKI.homepageurl) != -1) {
+    console.log(chalk.green(`Validated homepageurl`));
+}
+else{
+    console.log(chalk.red(`Invalid homepageurl provided`));
+}
