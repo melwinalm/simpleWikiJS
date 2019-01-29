@@ -1,17 +1,7 @@
 {
     "main": {
-        "title": "Simple Wiki JS Documentation",
-        "subtitle": "",
-        "description": "For seo purpose",
-        "font": "",
-        "defaultLanguage": "en",
-        "themecolor": "#ff6600"
+        "title": "Simple Wiki JS Documentation"
     },
-
-    "siteTitle": "Simple Wiki JS",
-    "theme": "themes/default.theme",
-    "forkMeOnGithubLabel": false,
-    "forkMeLink": "https://github.com/melwinalm/simplewikijs",
 
     "navigation": {
         "title": "Simple Wiki JS",
@@ -23,10 +13,7 @@
             {"title": "INSTALL", "url": "/install"},
             {"title": "GITHUB", "url": "https://github.com/melwinalm/simplewikijs"}
         ],
-
-        "icon": "yet to be done",
-        "template": "navigation/navigation.ejs",
-        "sticky": false
+        "template": "navigation/navigation.ejs"
     },
 
     "wiki": {
@@ -40,12 +27,6 @@
 
     "footer":{
         "template": "footer/footer.ejs"
-    },
-
-    "alert": {
-        "isshown": true,
-        "alerttype": "info",
-        "message": "A new version of simpleWikiJS will be releasing in the upcoming months"
     }
-    
+        
 }
