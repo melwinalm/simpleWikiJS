@@ -10,9 +10,9 @@ An easy to use configurable wiki site generator.
 
 - Once the repo is cloned to use the command `npm install` to install all the npm packages.
 
-- Once the packages are download use `nodemon start` to start the local server.
+- Once the packages are downloaded, use `npm start` to start the local server.
 
-- This should open `localhost:3000` in your browser
+- Now open `localhost:3000` in your browser.
 
 #### Using npm 
 
