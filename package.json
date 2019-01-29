@@ -4,6 +4,7 @@
   "description": "A static wiki library",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "node validate.js"
   },
   "author": "melwinalm",
