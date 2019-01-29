@@ -80,7 +80,7 @@ app.get('/' + DEFAULT_FOLDER_LOCATION + '/:url', function (req, res) {
             navigation: CONFIG.navigation,
             footer: CONFIG.footer
         })
-        console.log(chalk.red("Page not found: " + req.params.url));
+        console.log(chalk.red("Page not found: " + req.url));
     }
 })
 
