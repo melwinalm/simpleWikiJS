@@ -4,6 +4,7 @@ var app = express();
 var path = require('path');
 var showdown = require('showdown');
 var mdConverter = new showdown.Converter();
+var chalk = require('chalk');
 
 // app.use('/', express.static(__dirname + '/public'));
 app.use('/', express.static(__dirname + '/public'));
@@ -13,7 +14,7 @@ app.set('views', path.join(__dirname, 'templates'))
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`App listening on port ${port}!`))
+app.listen(port, () => console.log(chalk.blue(`App listening on port ${port}!`)));
 
 // Loading the config.js file
 var configBuffer = fs.readFileSync(path.join(__dirname, 'config.json'));
@@ -53,7 +54,7 @@ app.get('/' + DEFAULT_FOLDER_LOCATION + '/:url', function (req, res) {
 
             fs.readFile(fileLocation, 'utf8', function (err, content) {
                 if (err) {
-                    console.log("File not found: " + fileLocation);
+                    console.log(chalk.red("File not found: " + fileLocation));
                     res.sendStatus(404);
                 }
                 else {
@@ -79,7 +80,7 @@ app.get('/' + DEFAULT_FOLDER_LOCATION + '/:url', function (req, res) {
             navigation: CONFIG.navigation,
             footer: CONFIG.footer
         })
-        console.log("Page not found: " + req.params.url);
+        console.log(chalk.red("Page not found: " + req.params.url));
     }
 })
 
@@ -90,5 +91,5 @@ app.all('/*', function(req, res){
         navigation: CONFIG.navigation,
         footer: CONFIG.footer
     })
-    console.log("Route not found: " + JSON.stringify(req));
+    console.log(chalk.red("Route not found: " + JSON.stringify(req)));
 })
