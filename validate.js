@@ -215,5 +215,5 @@ if (wikiURLs.indexOf(WIKI.homepageurl) != -1) {
     console.log(chalk.green(`Validated homepageurl`));
 }
 else{
-    console.log(chalk.red(`Invalid homepageurl provided`));
+    console.log(chalk.red(`Invalid homepageurl provided. Please update the homepageurl key in wiki.json file`));
 }
