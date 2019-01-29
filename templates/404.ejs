@@ -9,16 +9,19 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/10.10.2/build.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/build.css" />
 
 </head>
 <body>
     <%- include(navigation.template, {navigation}) -%>
 
-    <div class="container-lg clearfix">
-        <p class="h1">Page Not Found</p> 
-        <p class="h3">Click <a href="../<%= defaultfolder %>/<%= homepageurl %>">here</a> to go to gome page</p>
-        <img src="../assets/logo.png" alt="Page not found" width="200" height="200"/>
+    <div style="display:flex;flex-direction:column;align-items:center;margin-top:40px;">
+        <div>
+            <p class="h1" >Page Not Found</p>
+        </div>
+        <div>
+            <p class="h3">Click <a href="../<%= defaultfolder %>/<%= homepageurl %>">here</a> to go to home page</p>
+        </div>
     </div>
 
 </body>
