@@ -7,10 +7,8 @@
         "title": "Simple Wiki JS",
         "items": [
             {"title": "HOME", "url": "/"},
-            {"title": "API", "url": "/api"},
-            {"title": "DOCS", "url": "/docs"},
-            {"title": "SUPPORT", "url": "/support"},
-            {"title": "INSTALL", "url": "/install"},
+            {"title": "NPM", "url": "https://npmjs.com/package/simplewikijs"},
+            {"title": "ISSUES", "url": "https://github.com/melwinalm/simplewikijs/issues"},
             {"title": "GITHUB", "url": "https://github.com/melwinalm/simplewikijs"}
         ],
         "template": "navigation/navigation.ejs"
