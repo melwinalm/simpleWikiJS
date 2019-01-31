@@ -1,0 +1,1 @@
+Once all the changes are done, run the command `node validate.js` to validate the config files, errors will be logged to the console. Fix the errors accordingly and re-run the command. Once all the errors are fixed go ahead and start the server.
