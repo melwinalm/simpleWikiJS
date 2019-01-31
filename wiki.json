@@ -1,33 +1,43 @@
 {
-    "homepageurl": "readme",
+    "homepageurl": "getting-started",
 
     "items": [
         {
-            "title": "README",
-            "url": "readme",
-            "filelocation": "README.md"
-        },
-        {
             "title": "Getting Started",
             "url": "getting-started",
-            "filelocation": "getting-started.md",
-            "subitems": [
-                {
-                    "title": "Installation",
-                    "url": "installation",
-                    "filelocation": "installation.md"
-                },
-                {
-                    "title": "Working with configuration",
-                    "url": "working-with-configuration",
-                    "filelocation": "working-with-configuration.md"
-                }
-            ]
+            "filelocation": "getting-started.md"
         },
         {
             "title": "Features",
             "url": "features",
             "filelocation": "features.md"
+        },
+        {
+            "title": "Customizing for your requirements",
+            "url": "customizing",
+            "filelocation": "customizing.md",
+            "subitems": [
+                {
+                    "title": "config.json",
+                    "url": "config-json",
+                    "filelocation": "config-json.md"
+                },
+                {
+                    "title": "wiki.json",
+                    "url": "wiki-json",
+                    "filelocation": "wiki-json.md"
+                },
+                {
+                    "title": "validating JSON files",
+                    "url": "validating-json",
+                    "filelocation": "validating-json.md"
+                },
+                {
+                    "title": "404 page",
+                    "url": "404-page",
+                    "filelocation": "404.md"
+                }
+            ]
         },
         {
             "title": "Change Log",
@@ -37,49 +47,19 @@
                 {
                     "title": "Version 1",
                     "url": "version-1",
-                    "filelocation": "version-1.md"
-                },
-                {
-                    "title": "Version 2",
-                    "url": "version-2",
-                    "filelocation": "version-2.md"
+                    "filelocation": "change-log.md"
                 }
             ]
         },
         {
-            "title": "API Reference",
-            "url": "api-reference",
-            "filelocation": "api-reference.md"
-        },
-        {
-            "title": "New in 3.0",
-            "url": "new-in-3",
-            "filelocation": "new-in-3.md"
-        },
-        {
-            "title": "Warning Explanations",
-            "url": "warning-explanations",
-            "filelocation": "warning-explanations.md"
-        },
-        {
-            "title": "Error explanations",
-            "url": "error-explanations",
-            "filelocation": "error-explanations.md"
+            "title": "About",
+            "url": "about",
+            "filelocation": "about.md"
         },
         {
             "title": "Contribute",
             "url": "contribute",
-            "filelocation": "contribute.md"
-        },
-        {
-            "title": "Download API Reference",
-            "url": "download-api-reference",
-            "filelocation": "download-api-reference.md"
-        },
-        {
-            "title": "Deprecated APIs",
-            "url": "deprecated-apis",
-            "filelocation": "deprecated-apis.md"
+            "filelocation": "CONTRIBUTE.md"
         }
     ]
 }
