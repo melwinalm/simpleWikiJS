@@ -8,11 +8,6 @@
             "filelocation": "getting-started.md"
         },
         {
-            "title": "Features",
-            "url": "features",
-            "filelocation": "features.md"
-        },
-        {
             "title": "Customizing for your requirements",
             "url": "customizing",
             "filelocation": "customizing.md",
@@ -50,11 +45,6 @@
                     "filelocation": "change-log.md"
                 }
             ]
-        },
-        {
-            "title": "About",
-            "url": "about",
-            "filelocation": "about.md"
         },
         {
             "title": "Contribute",
