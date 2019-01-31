@@ -1,5 +1,5 @@
 {
-  "name": "simpleWikiJS",
+  "name": "simplewikijs",
   "version": "1.0.0",
   "description": "An easy to use configurable wiki site generator built on top node.js",
   "main": "server.js",
