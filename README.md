@@ -1,6 +1,6 @@
 ## Demo
 
-Click [here](http://simplewikijs-env.uvxbzunvrr.ap-south-1.elasticbeanstalk.com/pages/getting-started) to see the demo
+Click [here](https://simple-wiki-js.herokuapp.com) to see the demo
 
 ## Getting Started
 
